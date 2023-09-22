@@ -17,7 +17,7 @@
           }
         ],
         "requiredInstallationDate": "2023-09-24T10:00:01Z",
-        "requiredMinimumOSVersion": "12.6.1"
+        "requiredMinimumOSVersion": "13.5.2"
       }
     ],
     "userExperience": {
