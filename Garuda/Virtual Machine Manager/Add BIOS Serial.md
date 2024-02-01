@@ -43,6 +43,8 @@ sudo dmidecode --type chassis
 
 9. Insert the following XML block into the configuration, replacing the placeholders with your system information:
 
+Insert directly after the tag '</vcpu>'
+
 ```xml
 <sysinfo type='smbios'>
     <bios>
@@ -75,6 +77,8 @@ sudo dmidecode --type chassis
 ```
 
 ## 6. Insert smbios mode above the \`</os>\` tag
+
+10. Insert directly before the closing tag '</os>'
 
 ```xml
     <smbios mode="sysinfo"/>
