@@ -71,15 +71,18 @@ sudo dmidecode --type chassis
       <entry name='asset'>YourChassisAsset</entry>
       <entry name='sku'>YourChassisSKU</entry>
     </chassis>
-    <os firmware="efi">
-        <smbios mode="sysinfo"/>
-    </os>
 </sysinfo>
+```
+
+## 6. Insert smbios mode above the \`</os>\` tag
+
+```xml
+    <smbios mode="sysinfo"/>
 ```
 
 10. Save the changes.
 
-## 6. Restart Virtual Machine
+## 7. Restart Virtual Machine
 
 11. Close the XML view and return to the virtual machine details.
 12. Restart the virtual machine by right-clicking on it and selecting "Start" or "Restart."
