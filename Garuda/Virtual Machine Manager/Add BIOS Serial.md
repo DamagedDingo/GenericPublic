@@ -43,9 +43,7 @@ sudo dmidecode --type chassis
 
 9. Insert the following XML block into the configuration, replacing the placeholders with your system information:
 
-Insert directly after the tag 
-```xml
-</vcpu>
+Insert directly after the tag \<\/vcpu\>
 ```
 
 ```xml
