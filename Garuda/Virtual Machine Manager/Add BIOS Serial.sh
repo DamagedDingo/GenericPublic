@@ -17,7 +17,7 @@ collect_system_info() {
 
 # Function to insert collected information into XML
 insert_into_xml() {
-  xml_data="
+  sysinfo_data="
   <sysinfo type='smbios'>
       <bios>
         $(echo "$bios_info" | awk '/Vendor/ {print "<entry name=\"vendor\">" $2 "</entry>"}' | sed 's/.$//')
@@ -45,23 +45,19 @@ insert_into_xml() {
         $(echo "$chassis_info" | awk '/Asset Tag/ {print "<entry name=\"asset\">" $3 "</entry>"}' | sed 's/.$//')
         $(echo "$chassis_info" | awk '/SKU Number/ {print "<entry name=\"sku\">" $3 "</entry>"}' | sed 's/.$//')
       </chassis>
-      <smbios mode="sysinfo"/>
   </sysinfo>
   "
+  
+  smbios_data="<smbios mode=\"sysinfo\"/>"
 
-  # List files in /etc/libvirt/qemu and prompt user to select one
-  xml_files=("/etc/libvirt/qemu/"*)
-  echo "Select the XML file to update:"
-  select xml_file in "${xml_files[@]}"; do
-    if [ -n "$xml_file" ]; then
-      break
-    else
-      echo "Invalid selection. Please try again."
-    fi
-  done
+  # Prompt user for the XML file
+  read -p "Enter the path to the XML file (e.g., /etc/libvirt/qemu/your_vm.xml): " xml_file
 
-  # Insert the XML data into the selected virtual machine XML file
-  sed -i "/<vcpu placement=\"static\">4<\/vcpu>/a ${xml_data}" "$xml_file"
+  # Insert the sysinfo XML data into the virtual machine XML file
+  sed -i "/<vcpu.*<\/vcpu>/a ${sysinfo_data}" "$xml_file"
+
+  # Insert the smbios XML data into the virtual machine XML file under OS
+  sed -i "/<os firmware=\"efi\">/a \ \ \ \ ${smbios_data}" "$xml_file"
 
   echo "XML data inserted successfully. Please check your XML configuration."
 }
