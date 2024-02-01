@@ -81,10 +81,7 @@ Insert directly after the tag
 
 ## 6. Insert smbios mode
 
-10. Insert directly before the closing tag 
-```xml
-</os>
-```
+10. Insert directly before the closing tag \<\/os\>
 
 ```xml
     <smbios mode="sysinfo"/>
