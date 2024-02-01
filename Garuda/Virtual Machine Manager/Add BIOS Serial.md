@@ -71,6 +71,9 @@ sudo dmidecode --type chassis
       <entry name='asset'>YourChassisAsset</entry>
       <entry name='sku'>YourChassisSKU</entry>
     </chassis>
+    <os firmware="efi">
+        <smbios mode="sysinfo"/>
+    </os>
 </sysinfo>
 ```
 
