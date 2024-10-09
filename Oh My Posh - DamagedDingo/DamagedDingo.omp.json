@@ -5,7 +5,7 @@
       "alignment": "left",
       "segments": [
         {
-          "background": "#0C212F",
+          "background": "#7d12ff",
           "foreground": "#FFFFFF",
           "leading_diamond": "\ue0b6",
           "style": "diamond",
@@ -23,9 +23,9 @@
           "type": "root"
         },
         {
-          "background": "#26BDBB",
-          "foreground": "#0C212F",
-          "leading_diamond": "<transparent,#26BDBB>\ue0b0</>",
+          "background": "#ab20fd",
+          "foreground": "#7d12ff",
+          "leading_diamond": "<transparent,#ab20fd>\ue0b0</>",
           "properties": {
             "folder_icon": "...",
             "folder_separator_icon": "<transparent> \ue0b1 </>",
@@ -57,9 +57,9 @@
           "type": "git"
         },
         {
-          "background": "#0C212F",
+          "background": "#7d12ff",
           "foreground": "#FFFFFF",
-          "leading_diamond": "<transparent,#0C212F>\ue0b0</>",
+          "leading_diamond": "<transparent,#7d12ff>\ue0b0</>",
           "properties": {
             "time_format": "15:04"
           },
@@ -69,9 +69,9 @@
           "type": "time"
         },
         {
-          "background": "#26BDBB",
-          "foreground": "#0C212F",
-          "leading_diamond": "<transparent,#26BDBB>\ue0b0</>",
+          "background": "#ab20fd",
+          "foreground": "#7d12ff",
+          "leading_diamond": "<transparent,#ab20fd>\ue0b0</>",
           "properties": {
             "style": "dallas",
             "threshold": 0
