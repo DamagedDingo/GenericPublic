@@ -5,8 +5,8 @@
       "alignment": "left",
       "segments": [
         {
-          "background": "#7d12ff",
-          "foreground": "#FFFFFF",
+          "background": "#7d12ff",  // Light purple
+          "foreground": "#FFFFFF",  // White text for contrast
           "leading_diamond": "\ue0b6",
           "style": "diamond",
           "template": " {{ .Icon }} ",
@@ -14,18 +14,18 @@
           "type": "os"
         },
         {
-          "background": "#DE2121",
-          "foreground": "#FFFFFF",
-          "leading_diamond": "<transparent,#DE2121>\ue0b0</>",
+          "background": "#ab20fd",  // Darker purple
+          "foreground": "#FFFFFF",  // White text for contrast
+          "leading_diamond": "<transparent,#ab20fd>\ue0b0</>",
           "style": "diamond",
-          "template": " \uf0e7 ",
+          "template": " \uf0e7 ",  // Lightning bolt icon for admin/root
           "trailing_diamond": "\ue0b0",
           "type": "root"
         },
         {
-          "background": "#ab20fd",
-          "foreground": "#7d12ff",
-          "leading_diamond": "<transparent,#ab20fd>\ue0b0</>",
+          "background": "#7d12ff",  // Light purple
+          "foreground": "#ab20fd",  // Dark purple text for contrast
+          "leading_diamond": "<transparent,#7d12ff>\ue0b0</>",
           "properties": {
             "folder_icon": "...",
             "folder_separator_icon": "<transparent> \ue0b1 </>",
@@ -38,14 +38,8 @@
           "type": "path"
         },
         {
-          "background": "#280C2E",
-          "background_templates": [
-            "{{ if or (.Working.Changed) (.Staging.Changed) }}#7621DE{{ end }}",
-            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#7621DE{{ end }}",
-            "{{ if gt .Ahead 0 }}#7621DE{{ end }}",
-            "{{ if gt .Behind 0 }}#7621DE{{ end }}"
-          ],
-          "foreground": "#FFFFFF",
+          "background": "#4b0082",  // Indigo purple for contrast with other purples
+          "foreground": "#FFFFFF",  // White text for good visibility
           "powerline_symbol": "\ue0b0",
           "properties": {
             "fetch_stash_count": true,
@@ -57,33 +51,36 @@
           "type": "git"
         },
         {
-          "background": "#7d12ff",
-          "foreground": "#FFFFFF",
-          "leading_diamond": "<transparent,#7d12ff>\ue0b0</>",
-          "properties": {
-            "time_format": "15:04"
-          },
-          "style": "diamond",
-          "template": " {{ .CurrentDate | date .Format }} ",
-          "trailing_diamond": "\ue0b0",
-          "type": "time"
-        },
-        {
-          "background": "#ab20fd",
-          "foreground": "#7d12ff",
+          "background": "#ab20fd",  // Dark purple for execution time
+          "foreground": "#FFFFFF",  // White text for contrast
           "leading_diamond": "<transparent,#ab20fd>\ue0b0</>",
           "properties": {
             "style": "dallas",
             "threshold": 0
           },
           "style": "diamond",
-          "template": " {{ .FormattedMs }}s ",
+          "template": " ⏱  {{ .FormattedMs }}s ",
           "trailing_diamond": "\ue0b0",
           "type": "executiontime"
         },
         {
-          "background": "#910000",
-          "foreground": "#ffffff",
+          "background": "#7d12ff",  // Light purple for music segment
+          "foreground": "#FFFFFF",  // White text for contrast
+          "leading_diamond": "<transparent,#7d12ff>\ue0b0</>",
+          "properties": {
+            "music_player": "ytm",
+            "no_playing_message": "",
+            "playing_template": "🎵 {{ .Artist }} - {{ .Title }}",
+            "paused_template": "⏸️ {{ .Artist }} - {{ .Title }}"
+          },
+          "style": "diamond",
+          "template": " 🎵 {{ .Artist }} - {{ .Title }} ",
+          "trailing_diamond": "\ue0b0",
+          "type": "music"
+        },
+        {
+          "background": "#910000",  // Dark red for error/status, to differentiate
+          "foreground": "#ffffff",  // White text for visibility
           "leading_diamond": "<transparent,background>\ue0b0</>",
           "style": "diamond",
           "template": "<transparent> \uf12a</> {{ reason .Code }} ",
@@ -96,5 +93,10 @@
   ],
   "console_title_template": "{{if .Root}} \u26a1 {{end}}{{.Folder | replace \"~\" \"🏠\"}} @ {{.HostName}}",
   "final_space": true,
-  "version": 2
+  "version": 2,
+  "transient_prompt": {
+    "background": "#7d12ff",
+    "foreground": "#FFFFFF",
+    "template": " {{ .Path }} "
+  }
 }
