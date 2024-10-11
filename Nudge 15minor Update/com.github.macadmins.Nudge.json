@@ -8,12 +8,12 @@
       "majorUpgradeArguments": "--install",
       "targetedOSVersions": [
         {
-          "minOSVersion": "12.0.0",
-          "maxOSVersion": "13.9.9",
+          "minOSVersion": "15.0.0",
+          "maxOSVersion": "15.0.0",
           "requiredOSVersion": "15.0.1"
         }
       ],
-      "allowedDeferrals": 20
+      "allowedDeferrals": 2
     }
   ],
   "userInterface": {
@@ -49,14 +49,13 @@
     "maxRandomDelayInSeconds": 600
   },
   "acceptableApps": [
-    "us.zoom.xos",               // Zoom
-    "com.cisco.webex.meeting",    // Cisco WebEx
-    "com.microsoft.teams",        // Microsoft Teams
-    "com.bluejeansnet.Blue",      // BlueJeans
-    "com.logmein.GoToMeeting",    // GoToMeeting
-    "com.apple.ScreenSharing",    // macOS Screen Sharing
-    "com.slack.Slack",            // Slack
-    "com.skype.skype"             // Skype
+    "us.zoom.xos",
+    "com.cisco.webex.meeting",
+    "com.microsoft.teams",
+    "com.logmein.GoToMeeting",
+    "com.apple.ScreenSharing",
+    "com.slack.Slack",
+    "com.skype.skype"
   ],
   "userExperience": {
     "allowUserQuitDeferrals": true,
