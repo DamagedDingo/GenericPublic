@@ -30,7 +30,6 @@
     }
   },
   "nudge": {
-    "pathToPlist": "/Library/Preferences/com.github.macadmins.Nudge.plist",
     "screenShotOnFirstRun": true,
     "simpleMode": true,
     "shouldExitIfMajorUpgradeAvailable": false,
