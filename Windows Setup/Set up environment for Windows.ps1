@@ -1,4 +1,4 @@
-# Set up environment for Windows
+# Set up environment for Windows and install apps
 
 [CmdletBinding()]
 param()
@@ -11,9 +11,37 @@ $fontURL = "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Mes
 $toggleDarkLightRepo = "https://github.com/danielgjackson/toggle-dark-light/#readme"
 $ohMyPoshConfigURL = "https://raw.githubusercontent.com/DamagedDingo/GenericPublic/refs/heads/main/Oh%20My%20Posh%20-%20DamagedDingo/DamagedDingo.omp.json"
 $profilesPaths = @("$HOME\Documents\PowerShell\profile.ps1", "$HOME\Documents\PowerShell\7\Microsoft.PowerShell_profile.ps1")
-#endregion
+#endregion Variables
 
 #region Functions
+
+# Function to install winget from GitHub latest release and VCLibs dependency
+function Install-WingetFromGitHub {
+    $latestWingetMsixBundleUri = $(Invoke-RestMethod https://api.github.com/repos/microsoft/winget-cli/releases/latest).assets.browser_download_url | Where-Object {$_.EndsWith(".msixbundle")}
+    $latestWingetMsixBundle = $latestWingetMsixBundleUri.Split("/")[-1]
+    
+    Write-Output "Downloading winget to current directory..."
+    Invoke-WebRequest -Uri $latestWingetMsixBundleUri -OutFile "./$latestWingetMsixBundle"
+    
+    Write-Output "Downloading VCLibs dependency..."
+    Invoke-WebRequest -Uri https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx -OutFile Microsoft.VCLibs.x64.14.00.Desktop.appx
+    
+    Write-Output "Installing VCLibs..."
+    Add-AppxPackage Microsoft.VCLibs.x64.14.00.Desktop.appx
+    
+    Write-Output "Installing winget..."
+    Add-AppxPackage $latestWingetMsixBundle
+}
+
+# Function to check if winget is installed
+function Check-WingetInstalled {
+    if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
+        Write-Output "Winget not found, installing latest version from GitHub..."
+        Install-WingetFromGitHub
+    } else {
+        Write-Output "Winget is already installed."
+    }
+}
 
 # Install Winget Apps if not installed
 function Install-WingetApps {
@@ -95,6 +123,7 @@ function Setup-OhMyPosh {
 #endregion
 
 #region Main
+Check-WingetInstalled
 Install-WingetApps
 Install-StoreApps
 Install-Git
