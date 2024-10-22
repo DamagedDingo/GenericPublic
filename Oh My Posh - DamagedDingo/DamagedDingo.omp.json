@@ -5,8 +5,8 @@
       "alignment": "left",
       "segments": [
         {
-          "background": "#7d12ff",  // Light purple
-          "foreground": "#FFFFFF",  // White text for contrast
+          "background": "#7d12ff",
+          "foreground": "#FFFFFF",
           "leading_diamond": "\ue0b6",
           "style": "diamond",
           "template": " {{ .Icon }} ",
@@ -14,17 +14,17 @@
           "type": "os"
         },
         {
-          "background": "#ab20fd",  // Darker purple
-          "foreground": "#FFFFFF",  // White text for contrast
+          "background": "#ab20fd",
+          "foreground": "#FFFFFF",
           "leading_diamond": "<transparent,#ab20fd>\ue0b0</>",
           "style": "diamond",
-          "template": " \uf0e7 ",  // Lightning bolt icon for admin/root
+          "template": " \uf0e7 ",
           "trailing_diamond": "\ue0b0",
           "type": "root"
         },
         {
-          "background": "#7d12ff",  // Light purple
-          "foreground": "#ab20fd",  // Dark purple text for contrast
+          "background": "#7d12ff",
+          "foreground": "#ab20fd",
           "leading_diamond": "<transparent,#7d12ff>\ue0b0</>",
           "properties": {
             "folder_icon": "...",
@@ -38,8 +38,8 @@
           "type": "path"
         },
         {
-          "background": "#4b0082",  // Indigo purple for contrast with other purples
-          "foreground": "#FFFFFF",  // White text for good visibility
+          "background": "#4b0082",
+          "foreground": "#FFFFFF",
           "powerline_symbol": "\ue0b0",
           "properties": {
             "fetch_stash_count": true,
@@ -51,8 +51,8 @@
           "type": "git"
         },
         {
-          "background": "#ab20fd",  // Dark purple for execution time
-          "foreground": "#FFFFFF",  // White text for contrast
+          "background": "#ab20fd",
+          "foreground": "#FFFFFF",
           "leading_diamond": "<transparent,#ab20fd>\ue0b0</>",
           "properties": {
             "style": "dallas",
@@ -64,8 +64,8 @@
           "type": "executiontime"
         },
         {
-          "background": "#7d12ff",  // Light purple for music segment
-          "foreground": "#FFFFFF",  // White text for contrast
+          "background": "#7d12ff",
+          "foreground": "#FFFFFF",
           "leading_diamond": "<transparent,#7d12ff>\ue0b0</>",
           "properties": {
             "music_player": "ytm",
@@ -79,8 +79,8 @@
           "type": "music"
         },
         {
-          "background": "#910000",  // Dark red for error/status, to differentiate
-          "foreground": "#ffffff",  // White text for visibility
+          "background": "#910000",
+          "foreground": "#ffffff",
           "leading_diamond": "<transparent,background>\ue0b0</>",
           "style": "diamond",
           "template": "<transparent> \uf12a</> {{ reason .Code }} ",
