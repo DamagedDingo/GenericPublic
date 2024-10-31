@@ -33,7 +33,7 @@
             "style": "agnoster_short"
           },
           "style": "diamond",
-          "template": " {{ .Path }} ",
+          "template": " {{ .PWD }} ",
           "trailing_diamond": "\ue0b0",
           "type": "path"
         },
@@ -97,6 +97,6 @@
   "transient_prompt": {
     "background": "#7d12ff",
     "foreground": "#FFFFFF",
-    "template": " {{ .Path }} "
+    "template": " {{ .PWD }} "
   }
 }
