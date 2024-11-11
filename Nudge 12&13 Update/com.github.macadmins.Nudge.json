@@ -17,6 +17,7 @@
     }
   ],
   "userInterface": {
+    "language": "en",
     "deferButtonText": "Defer",
     "updateRequiredTitle": "macOS Update Required",
     "updateRequiredSubTitle": "Your device must be updated to macOS 15.0.1 (Sequoia) by October 17th, 2024.",
