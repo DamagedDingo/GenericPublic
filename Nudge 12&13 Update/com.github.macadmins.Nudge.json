@@ -2,49 +2,7 @@
   "osVersionRequirements": [
     {
       "requiredInstallationDate": "2024-10-17T23:59:59Z",
-      "aboutUpdateURL": "https://support.apple.com/en-us/HT201541",
-      "actionButtonText": "Update Now",
-      "targetedOSVersions": [
-        {
-          "minOSVersion": "15.0.0",
-          "maxOSVersion": "15.0.0"
-        }
-      ]
+      "requiredMinimumOSVersion": "15.0.1"
     }
-  ],
-  "targetedOSVersionsRule": "any",
-  "enforceMinorUpdates": true,
-  "utilizeSOFAFeed": true,
-  "userInterface": {
-    "deferButtonText": "Defer",
-    "updateRequiredTitle": "macOS Update Required",
-    "updateRequiredSubTitle": "Your device must be updated to the latest macOS version available.",
-    "mainContentHeader": "Sydney Catholic Schools - Critical macOS Update",
-    "mainContentSubHeader": "A new macOS version is required to continue receiving security updates and features.",
-    "informationButtonText": "More Information",
-    "primaryQuitButtonText": "Update Now",
-    "secondaryQuitButtonText": "Remind Me Later",
-    "quitButton": {
-      "subHeader": "You can defer this update 10 times. After that, the update will be enforced."
-    }
-  },
-  "userExperience": {
-    "allowUserQuitDeferrals": true,
-    "allowedDeferrals": 10,
-    "allowedDeferralsUntilForcedSecondaryQuitButton": 5,
-    "approachingRefreshCycle": 6000,
-    "approachingWindowTime": 72,
-    "elapsedRefreshCycle": 300,
-    "imminentRefreshCycle": 600,
-    "imminentWindowTime": 24,
-    "initialRefreshCycle": 18000,
-    "maxRandomDelayInSeconds": 1200,
-    "noTimers": false,
-    "nudgeRefreshCycle": 60,
-    "randomDelay": false,
-    "allowGracePeriods": true,
-    "gracePeriodInstallDelay": 4,
-    "gracePeriodLaunchDelay": 1,
-    "gracePeriodPath": "/private/var/db/.AppleSetupDone"
-  }
+  ]
 }
