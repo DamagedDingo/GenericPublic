@@ -9,7 +9,7 @@
       "targetedOSVersions": [
         {
           "minOSVersion": "12.0.0",
-          "maxOSVersion": "13.9.9",
+          "maxOSVersion": "15.9.9",
           "requiredOSVersion": "15.0.1"
         }
       ],
