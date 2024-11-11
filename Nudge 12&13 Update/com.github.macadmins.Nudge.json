@@ -9,8 +9,7 @@
           "minOSVersion": "15.0.0",
           "maxOSVersion": "15.0.0"
         }
-      ],
-      "allowedDeferrals": 10
+      ]
     }
   ],
   "targetedOSVersionsRule": "any",
@@ -28,34 +27,6 @@
       "subHeader": "You can defer this update 10 times. After that, the update will be enforced."
     }
   },
-  "nudge": {
-    "pathToPlist": "/Library/Preferences/com.github.macadmins.Nudge.plist",
-    "screenShotOnFirstRun": true,
-    "simpleMode": true,
-    "shouldExitIfMajorUpgradeAvailable": false,
-    "acceptableCameraUsage": true,
-    "acceptableScreenSharingUsage": true,
-    "enforceMinorUpdates": true
-  },
-  "logging": {
-    "logPath": "/Library/Logs/Nudge.log",
-    "logLevel": "info",
-    "shouldLogDeferrals": true
-  },
-  "miscellaneous": {
-    "requiredInternetCheck": true,
-    "fallbackLanguage": "en",
-    "maxRandomDelayInSeconds": 600
-  },
-  "acceptableApps": [
-    "us.zoom.xos",
-    "com.cisco.webex.meeting",
-    "com.microsoft.teams",
-    "com.logmein.GoToMeeting",
-    "com.apple.ScreenSharing",
-    "com.slack.Slack",
-    "com.skype.skype"
-  ],
   "userExperience": {
     "allowUserQuitDeferrals": true,
     "allowedDeferrals": 10,
