@@ -13,6 +13,7 @@
     }
   ],
   "targetedOSVersionsRule": "any",
+  "enforceMinorUpdates": true,
   "utilizeSOFAFeed": true,
   "userInterface": {
     "deferButtonText": "Defer",
