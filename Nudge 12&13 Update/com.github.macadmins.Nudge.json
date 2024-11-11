@@ -6,8 +6,8 @@
       "actionButtonText": "Update Now",
       "targetedOSVersions": [
         {
-          "minOSVersion": "12.0.0",
-          "maxOSVersion": "15.9.9"
+          "minOSVersion": "15.0.0",
+          "maxOSVersion": "15.0.0"
         }
       ],
       "allowedDeferrals": 10
@@ -25,7 +25,7 @@
     "primaryQuitButtonText": "Update Now",
     "secondaryQuitButtonText": "Remind Me Later",
     "quitButton": {
-      "subHeader": "You can defer this update 20 times. After that, the update will be enforced."
+      "subHeader": "You can defer this update 10 times. After that, the update will be enforced."
     }
   },
   "nudge": {
@@ -58,8 +58,8 @@
   ],
   "userExperience": {
     "allowUserQuitDeferrals": true,
-    "allowedDeferrals": 1000000,
-    "allowedDeferralsUntilForcedSecondaryQuitButton": 14,
+    "allowedDeferrals": 10,
+    "allowedDeferralsUntilForcedSecondaryQuitButton": 5,
     "approachingRefreshCycle": 6000,
     "approachingWindowTime": 72,
     "elapsedRefreshCycle": 300,
