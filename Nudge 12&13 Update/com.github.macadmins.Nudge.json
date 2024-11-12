@@ -22,7 +22,6 @@
     "fallbackLanguage": "en",
     "requiredInstallationDisplayFormat": "EEEE, MMM d, yyyy",
     "showRequiredDate": true,
-    "showActivelyExploitedCVEs": false,
     "updateElements": [
       {
         "_language": "en",
